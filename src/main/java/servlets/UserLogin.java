@@ -28,6 +28,7 @@ public class UserLogin extends HttpServlet {
 			if(user.getUserRole().equals("manager")) {
 				// manager home page
 				session.setAttribute("role", "manager");
+				resp.sendRedirect("managerhome.jsp");
 			}else {
 				// customer home page
 				session.setAttribute("role", "customer");
